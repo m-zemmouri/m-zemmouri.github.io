@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+    <meta charset="utf-8">
+    <link href="assets/css/zemmourilibrary-dashboard.min.css" rel="stylesheet" />
+    <script src="assets/js/zemmourilibrary-dashboard.js"></script>
+    <script src="assets/js/locale/Northwind-ar.js"></script>
+    <script src="assets/js/locale/Northwind-en.js"></script>
+    <script src="assets/js/locale/Northwind-fr.js"></script>
+</head>
+
+<body>
+
+     <div class="container">
+         <div class="alert alert-info alert-dismissible" role="alert">
+             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+             <strong class="lang-entry">info! </strong>
+             <span class="lang-entry">to filter, select Year / Month</span>
+         </div>
+        <div class="row">
+            <div class="col-md-5" id="Chart_Pie_Benefice_Annuel"></div>
+            <div class="col-md-7" id="Chart_Column_Benefice_Mensuel"></div><br />
+            <br />
+        </div>
+        <div class="row">
+            <div class="col-md-12" id="Chart_Pie_Benefice_Category"></div>
+        </div><div class="row">
+        </div>
+    </div>
+
+    <footer class="footer"><div class="container"><p class="text-muted lang-entry">PowredBy</p></div></footer>
+
+</body>
+</html>
+<script>
+    Benefice_Category_Ready(data["Order_Detail"]);
+</script>
