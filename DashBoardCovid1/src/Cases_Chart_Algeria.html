@@ -1,0 +1,691 @@
+﻿<!DOCTYPE html>
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+    <meta charset="utf-8">
+    <!-- CSS -->
+    <link href="../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="../assets/bootstrap/css/sticky-footer-navbar.css" rel="stylesheet" />
+    <link href="../assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../assets/bootstrap-table/bootstrap-table.min.css" rel="stylesheet" /><link href="index.css" rel="stylesheet" />
+
+    <!-- jquery Scripts -->
+    <script src="../assets/jquery/jquery.min.js"></script>
+    <script src="../assets/jquery/jquery-ui.min.js"></script>
+    <!-- bootstrap Scripts -->
+    <script src="../assets/bootstrap/js/bootstrap.js"></script>
+    <script src="../assets/bootstrap-waitingfor/bootstrap-waitingfor.js"></script>
+    <!-- bootstrap-table Scripts -->
+    <script src="../assets/bootstrap-table/bootstrap-table.js"></script>
+    <script src="../assets/bootstrap-table/bootstrap-table-locale-all.js"></script>
+    <!--export-->
+    <script src="../assets/bootstrap-table/extensions/export/bootstrap-table-export.js"></script>
+    <script src="../assets/bootstrap-table/assets/tableExport.jquery.plugin/tableExport-Zemmouri.js"></script>
+    <script src="../assets/bootstrap-table/assets/tableExport.jquery.plugin/libs/jquery-base64/jquery-base64.js"></script>
+    <script src="../assets/bootstrap-table/assets/tableExport.jquery.plugin/libs/FileSaver/FileSaver.min.js"></script>
+    <script src="../assets/bootstrap-table/assets/tableExport.jquery.plugin/libs/html2canvas/html2canvas.min.js"></script>
+    <script src="../assets/bootstrap-table/assets/tableExport.jquery.plugin/libs/jsPDF/jspdf.min.js"></script>
+    <!--multiple-sort-->
+    <script src="../assets/bootstrap-table/extensions/multiple-sort/bootstrap-table-multiple-sort.js"></script>
+    <!--Advences Search-->
+    <script src="../assets/bootstrap-table/extensions/toolbar/bootstrap-table-toolbar.js"></script>
+    <!--  highcharts & Highstock Scripts -->
+    <script src="../assets/Highcharts/4.2.3/highcharts.js"></script>
+    <script src="../assets/Highcharts/4.2.3/highcharts-more.js"></script>
+    <script src="../assets/Highcharts/4.2.3/modules/solid-gauge.js"></script>
+    <script src="../assets/Highcharts/4.2.3/modules/funnel.js"></script>
+    <script src="../assets/Highcharts/4.2.3/modules/exporting.js"></script>
+    <script src="../assets/Highcharts/4.2.3/modules/no-data-to-display.js"></script>
+    <script src="../assets/Highcharts/4.2.3/modules/drilldown.js"></script>
+    <!--  Underscore Scripts -->
+    <script src="../assets/Underscore/1.8.3/underscore-min.js"></script>
+    <!--  ZEMMOURI Scripts -->
+    <script src="../assets/zemmouriLibrary/Data/dataManager-1.2.9.js"></script>
+    <script src="../assets/zemmouriLibrary/Highcharts/regroupData-1.2.10.js"></script>
+    <script src="../assets/zemmouriLibrary/Highcharts/personalization.js"></script>
+    <script src="../assets/zemmouriLibrary/bootstrap-table/build.js"></script>
+    <!--  Northwind Scripts -->
+    <!--</script>
+    <script src="assets/js/locale/Northwind-ar.js"></script>
+    <script src="assets/js/locale/Northwind-en.js"></script>
+    <script src="assets/js/locale/Northwind-fr.js"></script>-->
+    <script src="../assets/zemmouriLibrary/Northwind/Commun.js"></script>
+    <script src="../assets/zemmouriLibrary/Northwind/Parameters.js"></script>
+    <!--<script src="owid-covid-data.js"></script>-->
+    <script src="JsonData.js"></script>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- Static navbar -->
+        <div class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle lang-entry">Data&nbsp;<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="Cases_Data_Algeria.html" class='lang-entry'><i class="fa fa-table"></i>&nbsp;Cases Data Algeria</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle lang-entry">Charts&nbsp;<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="Cases_Chart_Algeria.html" class='lang-entry'><i class="fa fa-table"></i>&nbsp;Algeria</a></li>
+                                <li><a href="Cases_Chart_Algeria_USA.html" class='lang-entry'><i class="fa fa-table"></i>&nbsp;Algeria Vs USA</a></li>
+                                <li><a href="Cases_Chart_Comparaison_Country.html" class='lang-entry'><i class="fa fa-bar-chart"></i>&nbsp;Countries Comparaison</a></li>
+                                <li><a href="Cases_Chart_Comparaison_Model.html" class='lang-entry'><i class="fa fa-line-chart"></i>&nbsp;Models Comparaison</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fa fa-user"></i>&nbsp;<i class="fa fa-caret-down"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li>
+                                    <a href="#" class='lang-entry'><i class="fa fa-user"></i>&nbsp;User Profile</a>
+                                </li>
+                                <li>
+                                    <a href="#" class='lang-entry' data-toggle="modal" data-target="#myModal"><i class="fa fa-gear"></i>&nbsp;Settings</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="login.html" class='lang-entry'><i class="fa fa-sign-out"></i>&nbsp;Logout</a>
+                                </li>
+                            </ul>
+                            <!-- /.dropdown-user -->
+                        </li>
+                        <li><a href="about.html"><i class="fa fa-info-circle"></i></a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div><!--/.container-fluid -->
+        </div>
+
+    </div> <!-- /container -->
+    <div class="ribbon">
+        <a href="https://github.com/zemimoh/NORTHWIND_Dashboard" target="_blank"><i class="fa fa-github"></i>&nbsp;View Source on GitHub</a>
+    </div>
+    <div class="container">
+        <h1 class='page-header lang-entry'>Algeria</h1>
+        <div class="row">
+            <div class="col-md-12" id="Chart_Line_Total_Cases_Deaths"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-6" id="Chart_Line_Total_Cases"></div>
+            <div class="col-md-6" id="Chart_Line_Total_Deaths"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-6" id="Chart_Line_New_Cases"></div>
+            <div class="col-md-6" id="Chart_Line_New_Deaths"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-6" id="Chart_Line_New_Cases_Month"></div>
+            <div class="col-md-6" id="Chart_Line_New_Deaths_Month"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" id="Chart_Line_Cases"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" id="Chart_Line_Cases_Month"></div>
+        </div>
+    </div>
+
+    <footer class="footer"><div class="container"><p class="text-muted lang-entry">© 2021. Powred By ZEMMOURI Mohamed</p></div></footer>
+
+</body>
+</html>
+<script>
+    function getCharts() {
+
+        //Cases_Ready(data0["DZA"].data);
+        var myData = filterData(data, { iso_code: 'DZA' });
+        get_Chart_Line_Total_Cases_Deaths(myData);
+        get_Chart_Line_Total_Cases(myData);
+        get_Chart_Line_Total_Deaths(myData);
+        get_Chart_Line_New_Cases(myData);
+        get_Chart_Line_New_Deaths(myData);
+        get_Chart_Line_New_Cases_Month(myData);
+        get_Chart_Line_New_Deaths_Month(myData);
+        //get_Chart_Line_Cases(myData);
+        get_Chart_Line_Cases_Month(myData);
+    }
+
+    // Ready Function off CA Page
+    function Ready() {
+        Page_Initialize();
+        initializeColors();
+        getCharts();
+    }
+        function get_Chart_Line_Total_Cases_Deaths(data) {
+            //prepare data 
+            var categories = getDistinct(data, "date", true);
+            var parameter = [
+                { name: translate("Cases"), field: "total_cases", aggregation: "sum", categoredBy: "date", categories: categories },
+                { name: translate("Deaths"), field: "total_deaths", aggregation: "sum", categoredBy: "date", categories: categories }];
+
+            var series = group(data, parameter);
+
+            //Chart options
+            var MyOptions = {
+                chart:
+                {
+                    renderTo: "Chart_Line_Total_Cases_Deaths",
+                    type: 'line',
+                },
+                credits:
+                {
+                    text: 'Our World in Data',
+                    href: 'https://covid.ourworldindata.org/data/owid-covid-data.json'
+                },
+                title:
+                {
+                    text: "" + translate("Algeria Cases & Deaths") + ""
+                },
+                tooltip:
+                {
+                    enabled: true,
+                    formatter: function () {
+                        return "<b>" + this.x + "-" + this.point.series.name + "</b><br/>" + translate("Cases") + " : <b>" + Highcharts.numberFormat(this.point.y, 2) + "</b>";
+                    }
+                },
+
+                xAxis:
+                {
+                    categories: categories,
+                },
+                yAxis:
+                {
+                    title:
+                    {
+                        text: translate("Total"),
+                    },
+                    allowDecimals: false,
+                },
+                legend:
+                {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    borderWidth: 0
+                },
+                series: series.data,
+            };
+            var chart = new Highcharts.Chart(MyOptions);
+        }
+
+        function get_Chart_Line_Total_Cases(data) {
+            //prepare data 
+            var categories = getDistinct(data, "date", true);
+            var parameter = [
+                { name: translate("Cases"), field: "total_cases", aggregation: "sum", categoredBy: "date", categories: categories },
+              ];
+
+            var series = group(data, parameter);
+
+            //Chart options
+            var MyOptions = {
+                chart:
+                {
+                    renderTo: "Chart_Line_Total_Cases",
+                    type: 'line',
+                },
+                credits:
+                {
+                    text: 'Our World in Data',
+                    href: 'https://covid.ourworldindata.org/data/owid-covid-data.json'
+                },
+                title:
+                {
+                    text: "" + translate("Algeria Cases") + ""
+                },
+                tooltip:
+                {
+                    enabled: true,
+                    formatter: function () {
+                        return "<b>" + this.x + "-" + this.point.series.name + "</b><br/>" + translate("Cases") + " : <b>" + Highcharts.numberFormat(this.point.y, 2) + "</b>";
+                    }
+                },
+
+                xAxis:
+                {
+                    categories: categories,
+                },
+                yAxis:
+                {
+                    title:
+                    {
+                        text: translate("Total"),
+                    },
+                    allowDecimals: false,
+                },
+                legend:
+                {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    borderWidth: 0
+                },
+                series: series.data,
+            };
+            var chart = new Highcharts.Chart(MyOptions);
+        }
+
+        function get_Chart_Line_Total_Deaths(data) {
+            //prepare data 
+            var categories = getDistinct(data, "date", true);
+            var parameter = [
+                { name: translate("Deaths"), field: "total_deaths", aggregation: "sum", categoredBy: "date", categories: categories }];
+
+            var series = group(data, parameter);
+            series.data[0]["color"] = Highcharts.getOptions().colors[1];
+            //Chart options
+            var MyOptions = {
+                chart:
+                {
+                    renderTo: "Chart_Line_Total_Deaths",
+                    type: 'line',
+                },
+                credits:
+                {
+                    text: 'Our World in Data',
+                    href: 'https://covid.ourworldindata.org/data/owid-covid-data.json'
+                },
+                title:
+                {
+                    text: "" + translate("Algeria Deaths") + ""
+                },
+                tooltip:
+                {
+                    enabled: true,
+                    formatter: function () {
+                        return "<b>" + this.x + "-" + this.point.series.name + "</b><br/>" + translate("Cases") + " : <b>" + Highcharts.numberFormat(this.point.y, 2) + "</b>";
+                    }
+                },
+
+                xAxis:
+                {
+                    categories: categories,
+                },
+                yAxis:
+                {
+                    title:
+                    {
+                        text: translate("Total"),
+                    },
+                    allowDecimals: false,
+                },
+                legend:
+                {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    borderWidth: 0
+                },
+                series: series.data,
+            };
+            var chart = new Highcharts.Chart(MyOptions);
+        }
+
+        function get_Chart_Line_New_Cases(data) {
+            //prepare data 
+            var categories = getDistinct(data, "date", true);
+            var parameter = [
+                { name: translate("Cases"), field: "new_cases", aggregation: "sum", categoredBy: "date", categories: categories },
+            ];
+
+            var series = group(data, parameter);
+
+            //Chart options
+            var MyOptions = {
+                chart:
+                {
+                    renderTo: "Chart_Line_New_Cases",
+                    type: 'line',
+                },
+                credits:
+                {
+                    text: 'Our World in Data',
+                    href: 'https://covid.ourworldindata.org/data/owid-covid-data.json'
+                },
+                title:
+                {
+                    text: "" + translate("Algeria New Cases") + ""
+                },
+                tooltip:
+                {
+                    enabled: true,
+                    formatter: function () {
+                        return "<b>" + this.x + "-" + this.point.series.name + "</b><br/>" + translate("Cases") + " : <b>" + Highcharts.numberFormat(this.point.y, 2) + "</b>";
+                    }
+                },
+
+                xAxis:
+                {
+                    categories: categories,
+                },
+                yAxis:
+                {
+                    title:
+                    {
+                        text: translate("New"),
+                    },
+                    allowDecimals: false,
+                },
+                legend:
+                {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    borderWidth: 0
+                },
+                series: series.data,
+            };
+            var chart = new Highcharts.Chart(MyOptions);
+        }
+
+        function get_Chart_Line_New_Deaths(data) {
+            //prepare data 
+            var categories = getDistinct(data, "date", true);
+            var parameter = [
+                { name: translate("Deaths"), field: "new_deaths", aggregation: "sum", categoredBy: "date", categories: categories }];
+
+            var series = group(data, parameter);
+            series.data[0]["color"] = Highcharts.getOptions().colors[1];
+            //Chart options
+            var MyOptions = {
+                chart:
+                {
+                    renderTo: "Chart_Line_New_Deaths",
+                    type: 'line',
+                },
+                credits:
+                {
+                    text: 'Our World in Data',
+                    href: 'https://covid.ourworldindata.org/data/owid-covid-data.json'
+                },
+                title:
+                {
+                    text: "" + translate("Algeria New Deaths") + ""
+                },
+                tooltip:
+                {
+                    enabled: true,
+                    formatter: function () {
+                        return "<b>" + this.x + "-" + this.point.series.name + "</b><br/>" + translate("Cases") + " : <b>" + Highcharts.numberFormat(this.point.y, 2) + "</b>";
+                    }
+                },
+
+                xAxis:
+                {
+                    categories: categories,
+                },
+                yAxis:
+                {
+                    title:
+                    {
+                        text: translate("New"),
+                    },
+                    allowDecimals: false,
+                },
+                legend:
+                {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    borderWidth: 0
+                },
+                series: series.data,
+            };
+            var chart = new Highcharts.Chart(MyOptions);
+        }
+
+        function get_Chart_Line_New_Cases_Month(data) {
+            //prepare data 
+            var categories = getDistinct(data, "month", true);
+            var parameter = [
+                { name: translate("Cases"), field: "new_cases", aggregation: "sum", categoredBy: "month", categories: categories },
+            ];
+
+            var series = group(data, parameter);
+
+            //Chart options
+            var MyOptions = {
+                chart:
+                {
+                    renderTo: "Chart_Line_New_Cases_Month",
+                    type: 'line',
+                },
+                credits:
+                {
+                    text: 'Our World in Data',
+                    href: 'https://covid.ourworldindata.org/data/owid-covid-data.json'
+                },
+                title:
+                {
+                    text: "" + translate("Algeria Monthly Cases") + ""
+                },
+                tooltip:
+                {
+                    enabled: true,
+                    formatter: function () {
+                        return "<b>" + this.x + "-" + this.point.series.name + "</b><br/>" + translate("Cases") + " : <b>" + Highcharts.numberFormat(this.point.y, 2) + "</b>";
+                    }
+                },
+
+                xAxis:
+                {
+                    categories: categories,
+                },
+                yAxis:
+                {
+                    title:
+                    {
+                        text: translate("New / Month"),
+                    },
+                    allowDecimals: false,
+                },
+                legend:
+                {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    borderWidth: 0
+                },
+                series: series.data,
+            };
+            var chart = new Highcharts.Chart(MyOptions);
+        }
+
+        function get_Chart_Line_New_Deaths_Month(data) {
+            //prepare data 
+            var categories = getDistinct(data, "month", true);
+            var parameter = [
+                { name: translate("Deaths"), field: "new_deaths", aggregation: "sum", categoredBy: "month", categories: categories }];
+
+            var series = group(data, parameter);
+            series.data[0]["color"] = Highcharts.getOptions().colors[1];
+            //Chart options
+            var MyOptions = {
+                chart:
+                {
+                    renderTo: "Chart_Line_New_Deaths_Month",
+                    type: 'line',
+                },
+                credits:
+                {
+                    text: 'Our World in Data',
+                    href: 'https://covid.ourworldindata.org/data/owid-covid-data.json'
+                },
+                title:
+                {
+                    text: "" + translate("Algeria Monthly Deaths") + ""
+                },
+                tooltip:
+                {
+                    enabled: true,
+                    formatter: function () {
+                        return "<b>" + this.x + "-" + this.point.series.name + "</b><br/>" + translate("Cases") + " : <b>" + Highcharts.numberFormat(this.point.y, 2) + "</b>";
+                    }
+                },
+
+                xAxis:
+                {
+                    categories: categories,
+                },
+                yAxis:
+                {
+                    title:
+                    {
+                        text: translate("New / Month"),
+                    },
+                    allowDecimals: false,
+                },
+                legend:
+                {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    borderWidth: 0
+                },
+                series: series.data,
+            };
+            var chart = new Highcharts.Chart(MyOptions);
+        }
+
+
+        function get_Chart_Line_Cases(data) {
+            //prepare data 
+            var parameter = [
+                { groupBy: "iso_code", name: translate("Cases"), field: "new_cases_p", aggregation: "sum", categoredBy: "date"/*, categories: categories*/ },
+           /* { groupBy: "iso_code", name: translate("Deaths"), field: "new_deaths", aggregation: "sum", categoredBy: "date", categories: categories }*/];
+
+            parameter = { groupBy: "iso_code", name: translate("Cases"), field: "new_cases_p", aggregation: "sum", categoredBy: "date"/*, categories: categories*/ };
+
+            var series = group(data, parameter);
+
+            //Chart options
+            var MyOptions = {
+                chart:
+                {
+                    renderTo: "Chart_Line_Cases",
+                    type: 'line',
+                },
+                credits:
+                {
+                    text: 'Our World in Data',
+                    href: 'https://covid.ourworldindata.org/data/owid-covid-data.json'
+                },
+                title:
+                {
+                    text: "" + translate("Algeria Cases Pourcentage 1 / 10000") + ""
+                },
+                tooltip:
+                {
+                    enabled: true,
+                    formatter: function () {
+                        return "<b>" + this.x + "-" + this.point.series.name + "</b><br/>" + translate("Cases") + " : <b>" + Highcharts.numberFormat(this.point.y, 2) + "</b>";
+                    }
+                },
+
+                xAxis:
+                {
+                    categories: "date",
+                },
+                yAxis:
+                {
+                    title:
+                    {
+                        text: translate("Augmentation Pourcentage"),
+                    },
+                    allowDecimals: false,
+                },
+                legend:
+                {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    borderWidth: 0
+                },
+                series: series.data,
+            };
+            var chart = new Highcharts.Chart(MyOptions);
+        }
+
+    function get_Chart_Line_Cases_Month(data) {
+        //prepare data 
+        //var parameter = { groupBy: "Year", name: translate("Turnover"), field: "Extended Price", aggregation: "cum", categoredBy: "Month", categories: categoriesDictionary["Months"] };
+        var categories = getDistinct(data, "month", true);
+        var parameter = [
+            { name: translate("Cases"), field: "new_cases_p", aggregation: "sum", categoredBy: "month", categories: categories },
+            { name: translate("Deaths"), field: "new_deaths_p", aggregation: "sum", categoredBy: "month", categories: categories }];
+
+        var series = group(data, parameter);
+
+        //Chart options
+        var MyOptions = {
+            chart:
+            {
+                renderTo: "Chart_Line_Cases_Month",
+                type: 'line',
+            },
+            credits:
+            {
+                text: 'Our World in Data',
+                href: 'https://covid.ourworldindata.org/data/owid-covid-data.json'
+            },
+            title:
+            {
+                text: "" + translate("Algeria Cases Pourcentage") + ""
+            },
+            tooltip:
+            {
+                enabled: true,
+                formatter: function () {
+                    return "<b>" + this.x + "-" + this.point.series.name + "</b><br/>" + translate("Cases") + " : <b>" + Highcharts.numberFormat(this.point.y, 2) + "</b>";
+                }
+            },
+
+            xAxis:
+            {
+                categories: categories,
+            },
+            yAxis:
+            {
+                title:
+                {
+                    text: translate("Augmentation Pourcentage"),
+                },
+                allowDecimals: true,
+                labels: {
+                    style: {
+                        fontWeight: "bold"
+                    },
+                    formatter: function () {
+                        return this.value * 100 + "%";
+                    }
+                }
+            },
+            legend:
+            {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle',
+                borderWidth: 0
+            },
+            series: series.data,
+        };
+        var chart = new Highcharts.Chart(MyOptions);
+    }
+</script>

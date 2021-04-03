@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+    <meta charset="utf-8">
+    <!-- CSS -->
+    <link href="../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="../assets/bootstrap/css/sticky-footer-navbar.css" rel="stylesheet" />
+    <link href="../assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../assets/bootstrap-table/bootstrap-table.min.css" rel="stylesheet" /><link href="index.css" rel="stylesheet" />
+
+    <!-- jquery Scripts -->
+    <script src="../assets/jquery/jquery.min.js"></script>
+    <script src="../assets/jquery/jquery-ui.min.js"></script>
+    <!-- bootstrap Scripts -->
+    <script src="../assets/bootstrap/js/bootstrap.js"></script>
+    <script src="../assets/bootstrap-waitingfor/bootstrap-waitingfor.js"></script>
+    <!-- bootstrap-table Scripts -->
+    <script src="../assets/bootstrap-table/bootstrap-table.js"></script>
+    <script src="../assets/bootstrap-table/bootstrap-table-locale-all.js"></script>
+    <!--export-->
+    <script src="../assets/bootstrap-table/extensions/export/bootstrap-table-export.js"></script>
+    <script src="../assets/bootstrap-table/assets/tableExport.jquery.plugin/tableExport-Zemmouri.js"></script>
+    <script src="../assets/bootstrap-table/assets/tableExport.jquery.plugin/libs/jquery-base64/jquery-base64.js"></script>
+    <script src="../assets/bootstrap-table/assets/tableExport.jquery.plugin/libs/FileSaver/FileSaver.min.js"></script>
+    <script src="../assets/bootstrap-table/assets/tableExport.jquery.plugin/libs/html2canvas/html2canvas.min.js"></script>
+    <script src="../assets/bootstrap-table/assets/tableExport.jquery.plugin/libs/jsPDF/jspdf.min.js"></script>
+    <!--multiple-sort-->
+    <script src="../assets/bootstrap-table/extensions/multiple-sort/bootstrap-table-multiple-sort.js"></script>
+    <!--Advences Search-->
+    <script src="../assets/bootstrap-table/extensions/toolbar/bootstrap-table-toolbar.js"></script>
+    <!--  highcharts & Highstock Scripts -->
+    <script src="../assets/Highcharts/4.2.3/highcharts.js"></script>
+    <script src="../assets/Highcharts/4.2.3/highcharts-more.js"></script>
+    <script src="../assets/Highcharts/4.2.3/modules/solid-gauge.js"></script>
+    <script src="../assets/Highcharts/4.2.3/modules/funnel.js"></script>
+    <script src="../assets/Highcharts/4.2.3/modules/exporting.js"></script>
+    <script src="../assets/Highcharts/4.2.3/modules/no-data-to-display.js"></script>
+    <script src="../assets/Highcharts/4.2.3/modules/drilldown.js"></script>
+    <!--  Underscore Scripts -->
+    <script src="../assets/Underscore/1.8.3/underscore-min.js"></script>
+    <!--  ZEMMOURI Scripts -->
+    <script src="../assets/zemmouriLibrary/Data/dataManager-1.2.8.js"></script>
+    <script src="../assets/zemmouriLibrary/Highcharts/regroupData-1.2.6.js"></script>
+    <script src="../assets/zemmouriLibrary/Highcharts/personalization.js"></script>
+    <script src="../assets/zemmouriLibrary/bootstrap-table/build.js"></script>
+    <!--  Northwind Scripts -->
+    <!---->
+    <!--<script src="../assets/zemmouriLibrary/Northwind/Parameters.js"></script>-->
+    <!--<script src="../assets/zemmouriLibrary/Northwind/Commun.js"></script>
+    <script src="assets/js/locale/Northwind-ar.js"></script>
+    <script src="assets/js/locale/Northwind-en.js"></script>
+    <script src="assets/js/locale/Northwind-fr.js"></script>-->
+    <script src="owid-covid-data.js"></script>
+    <script src="JsonData.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Static navbar -->
+        <div class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle lang-entry">Data&nbsp;<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="Cases_Data_Algeria.html" class='lang-entry'><i class="fa fa-table"></i>&nbsp;Cases Data Algeria</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle lang-entry">Charts&nbsp;<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="Cases_Chart_Algeria.html" class='lang-entry'><i class="fa fa-table"></i>&nbsp;Algeria</a></li>
+                                <li><a href="Cases_Chart_Algeria_USA.html" class='lang-entry'><i class="fa fa-table"></i>&nbsp;Algeria Vs USA</a></li>
+                                <li><a href="Cases_Chart_Comparaison_Country.html" class='lang-entry'><i class="fa fa-bar-chart"></i>&nbsp;Countries Comparaison</a></li>
+                                <li><a href="Cases_Chart_Comparaison_Model.html" class='lang-entry'><i class="fa fa-line-chart"></i>&nbsp;Models Comparaison</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fa fa-user"></i>&nbsp;<i class="fa fa-caret-down"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li>
+                                    <a href="#" class='lang-entry'><i class="fa fa-user"></i>&nbsp;User Profile</a>
+                                </li>
+                                <li>
+                                    <a href="#" class='lang-entry' data-toggle="modal" data-target="#myModal"><i class="fa fa-gear"></i>&nbsp;Settings</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="login.html" class='lang-entry'><i class="fa fa-sign-out"></i>&nbsp;Logout</a>
+                                </li>
+                            </ul>
+                            <!-- /.dropdown-user -->
+                        </li>
+                        <li><a href="about.html"><i class="fa fa-info-circle"></i></a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div><!--/.container-fluid -->
+        </div>
+
+    </div> <!-- /container -->
+    <div class="ribbon">
+        <a href="https://github.com/zemimoh/NORTHWIND_Dashboard" target="_blank"><i class="fa fa-github"></i>&nbsp;View Source on GitHub</a>
+    </div>
+    <div class="container">
+        <h1 class="page-header lang-entry">Data of Algeria</h1>
+        <div id="toolbar">
+        </div>
+        <table id="bstable"
+               data-toggle="table"
+               data-locale="fr-FR"
+               data-show-columns="true"
+               data-search="true"
+               data-pagination="true"
+               data-show-pagination-switch="true"
+               data-show-toggle="true"
+               data-show-export="true"
+               data-toolbar="#toolbar"
+               data-advanced-search="true"
+               data-id-table="advancedTable"
+               data-show-multi-sort="true"
+               data-sort-priority='[{"sortName": "Stock Montant","sortOrder":"Asc"}]'>
+            <thead>
+                <tr>
+                    <th data-visible='true' data-field='date' data-sortable='true' data-searchable='true' class='lang-entry'>Date</th>
+                    <th data-visible='true' data-field='new_cases' data-sortable='true' class='lang-entry'>Cases</th>
+                    <th data-visible='true' data-field='total_cases' data-sortable='true' data-searchable='true' class='lang-entry'>Total Cases</th>
+                    <th data-visible='false' data-field='new_cases_per_million' data-sortable='true' class='lang-entry'>New cases per Million</th>
+                    <th data-visible='false' data-field='new_cases_p' data-sortable='true' class='lang-entry'>New cases per All Cases</th>
+                    <th data-visible='true' data-field='new_deaths' data-sortable='true' data-searchable='true' class='lang-entry'>Deaths</th>
+                    <th data-visible='true' data-field='total_deaths' data-sortable='true' data-searchable='true' class='lang-entry'>Total Deaths</th>
+                    <th data-visible='false' data-field='new_deaths_per_million' data-sortable='true' class='lang-entry'>New Deaths per Million</th>
+                    <th data-visible='false' data-field='new_deaths_p' data-sortable='true' class='lang-entry'>New Deaths per All</th>
+                    <!--<th data-visible='true' data-field='total_tests' data-sortable='true' data-searchable='true' class='lang-entry'>Total tests</th>
+                    <th data-visible='false' data-field='new_tests_per_million' data-sortable='true' class='lang-entry'>New tests per Million</th>
+                    <th data-visible='false' data-field='new_tests_p' data-sortable='true' class='lang-entry'>New tests per All</th>-->
+                </tr>
+            </thead>
+        </table>
+
+    </div>
+    <footer class="footer"><div class="container"><p class="text-muted lang-entry">© 2021. Powred By ZEMMOURI Mohamed</p></div></footer>
+</body>
+</html>
+<script> 
+    function Ready()
+    {
+        //filter Data
+        data = filterData(data, { iso_code: 'DZA' });
+        getBootstrapTable(data, "bstable");
+    };
+    Ready();
+</script>

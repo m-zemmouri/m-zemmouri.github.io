@@ -1,0 +1,11 @@
+Category;Product;Supplier;Stock;Units On Order;Reorder Level;Unit Price;Stock Sum
+Beverages;Chai;Exotic Liquids;39;0;10;18;702
+Beverages;Chang;Exotic Liquids;17;40;25;19;323
+Beverages;Chartreuse verte;Aux joyeux eccl‚siastiques;69;0;5;18;1242
+Beverages;C“te de Blaye;Aux joyeux eccl‚siastiques;17;0;15;263.5;4479.5
+Beverages;Guaran  Fant stica;Refrescos Americanas LTDA;20;0;0;4.5;90
+Beverages;Ipoh Coffee;Leka Trading;17;10;25;46;782
+Beverages;Lakkalik””ri;Karkki Oy;57;0;20;18;1026
+Beverages;Laughing Lumberjack Lager;Bigfoot Breweries;52;0;10;14;728
+Beverages;Outback Lager;Pavlova, Ltd.;15;10;30;15;225
+Beverages;Rh”nbr„u Klosterbier;Plutzer Lebensmittelgroám„rkte AG;125;0;25;7.75;968.75
