@@ -24,6 +24,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/10.3.3/modules/data.min.js" integrity="sha512-Fplrq52So7oGaI4mFmFcVpZ50US6saI/RB5+yec8oNhQQwcn8X77RhX7crLFzBoenjUjAbfVJNIH7KJa5G8Kgg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/10.3.3/modules/exporting.min.js" integrity="sha512-azuQazgd4m6TavtXB0Zgm1Pb7RBk7Bq0G9JV8nmec7/toRckUZ6L/fG8D3xcoXk0Le9DS+5YmAi421fry057Fg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<!-- local ressources -->
+
 		<script type="module" crossorigin src="./assets/index.js"></script>
 		<link rel="stylesheet" href="./assets/index.css" />
 	</head>
@@ -65,19 +66,20 @@
 							<label class="form-check-label" for="flexSwitchCheckDefault">Show + Cases only</label>
 						</div>
 					</div>
-					<table id="table" data-toolbar="#toolbar" data-toggle="table" data-height="560" data-show-columns="true" data-pagination="true" data-show-pagination-switch="true">
+					<table id="table" data-toolbar="#toolbar" data-toggle="table" data-height="556" data-show-columns="true" data-pagination="true" data-show-pagination-switch="true">
 						<thead>
 							<tr>
-								<th data-field="PatientID" data-sortable="true">Patient ID</th>
+								<th data-field="Patient" data-sortable="true">Patient</th>
 								<th data-field="Gender" data-align="center" data-sortable="true">Gender</th>
 								<th data-field="PatientBirthDate" data-align="center" data-visible="false" data-sortable="true">Birth Date</th>
 								<th data-field="Age" data-align="right" data-sortable="true">Age</th>
 								<th data-field="AgeRang" data-align="center" data-visible="false" data-sortable="true">Age Rang</th>
 								<th data-field="AgeStage" data-visible="false" data-sortable="true">Age Stage</th>
-								<th data-field="StudyInstanceUID" data-visible="false">Study ID</th>
+								<th data-field="StudyID" data-visible="false">Study ID</th>
 								<th data-field="StudyDescription" data-visible="false">Study Description</th>
 								<th data-field="StudyDate" data-align="center" data-sortable="true">Study Date</th>
 								<th data-field="Covid" data-align="center" data-formatter="covidFormatter" data-sortable="true">Covid</th>
+								<th data-field="Variant" data-visible="false" data-sortable="true">Variant</th>
 								<th data-field="LesionRate" data-align="right" data-formatter="lesionRateFormatter" data-sortable="true">Lesion Rate</th>
 								<th data-field="LesionRang" data-align="center" data-visible="false" data-sortable="true">Lesion Rang</th>
 								<th data-field="LesionStage" data-align="center" data-visible="false" data-sortable="true">Lesion Stage</th>
