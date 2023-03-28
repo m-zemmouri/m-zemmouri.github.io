@@ -1,7 +1,7 @@
 ﻿<html>
 	<head>
 		<meta charset="utf-8" />
-		<base href="." />
+		<!-- <base href="." /> -->
 		<!-- jquery -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<!-- bootstrap -->
@@ -10,178 +10,140 @@
 		<!-- bootstrap-icons -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css" integrity="sha512-5PV92qsds/16vyYIJo3T/As4m2d8b6oWYfoqV+vtizRB6KhF1F9kYzWzQmsO6T3z3QG2Xdhrx7FQ+5R1LiQdUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 		<!-- bootswatch -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.2.1/cerulean/bootstrap.min.css" integrity="sha512-vRAfh1KgvlY0fYGmjwoijlmB618+FvzjbEGB03zuFUbuARt0A+bH53JzGwWztj1uBagJGCL5+PjSutQH67qorg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.2.3/lumen/bootstrap.min.css" integrity="sha512-Y6hbhfksNvY29oe7NsJ4ED55Gi0iFDfphe/gDNbOqHce+qMt+G1FSy48+zoy2ZSwbwdLWABtVKI+ZgrInCFvHg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.2.3/simplex/bootstrap.min.css" integrity="sha512-9BNt00AjhUkiAd7u/l73pzR296z2X5DtAE58kbo8cwJaZaLCOdh8ULfXD3O6B1SHf/5MJw1kJsxL8QQXIbGdKw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 		<!-- bootstrap-table -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.21.1/bootstrap-table.min.css" integrity="sha512-LWPhjCM1g+Vf7cnbYEc3AG20LhMd3uvGDltE4kGPMgzuK5xMdxGqoqpGNkmstaf00vXPCbegOW3LmiDhxKxe+w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.21.1/bootstrap-table.min.js" integrity="sha512-/OzWt35/0T0ed3ffIJV97dPBS0pFnHB9kewb/hheD9fyWqwM/mFTw+WFDaZ4eNP6/9z3Q1hKYEaUCvQlZmyj7w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.21.1/bootstrap-table-locale-all.min.js" integrity="sha512-3bXLnVgSOOvvY0pfminiYur1TVhLyYErLEXieI/b7xBKXJK58HhS0nvnYH6ZwFEGRrAaUD7SBOMdIPXbwY/gGA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.21.3/bootstrap-table.min.css" integrity="sha512-nR/UyMwqN3G7hUXj555TPsmLNyBHbTuJal56HT4p1iYzJ6wdI8CFQfkHe6POuosBt7FC2dsrhBEGM71TCJyxXQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.21.3/bootstrap-table.min.js" integrity="sha512-Te6MkoARxAAas78tcMW+r1cXGomPKpQfdun1ymUHjfDqoOhwDXI7P4Q6WwAnQUX8AOqJ2tKpUO+P3cc4XTjeZA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.21.3/locale/bootstrap-table-en-US.min.js" integrity="sha512-0Kk6Idtq2WwiYHHAgY/TTXrO4YWMdQuqeclgmS1gnaNhRG+yHnrQB1MVTfxIdknojLqIGSbWzAFkjg9XxJJBiw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<!-- font-awesome -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 		<!-- highcharts -->
-
-		<!--
-		<script src="../assets/Highcharts/4.2.3/highcharts.js"></script>
-		<script src="../assets/Highcharts/4.2.3/highcharts-more.js"></script>
-		<script src="../assets/Highcharts/4.2.3/modules/data.js"></script>
-		<script src="../assets/Highcharts/4.2.3/modules/exporting.js"></script>
-		<script src="../assets/Highcharts/4.2.3/modules/solid-gauge.js"></script>
-		<script src="../assets/Highcharts/4.2.3/modules/funnel.js"></script>
-		<script src="../assets/Highcharts/4.2.3/modules/no-data-to-display.js"></script>
-		<script src="../assets/Highcharts/4.2.3/modules/drilldown.js"></script>
-		-->
-
-		<!--
-		<script src="https://code.highcharts.com/highcharts.js"></script>
-		<script src="https://code.highcharts.com/highcharts-more.js"></script>
-		<script src="https://code.highcharts.com/modules/data.js"></script>
-		<script src="https://code.highcharts.com/modules/exporting.js"></script>
-		<script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
-		<script src="https://code.highcharts.com/modules/funnel.js"></script>
-		<script src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
-		<script src="https://code.highcharts.com/modules/drilldown.js"></script>
-		-->
-
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/10.3.3/highcharts.min.js" integrity="sha512-zOsTVG67dU2+q6O+yrK+tpDnyQg51TGunT/Ts0X9F+8GYYpRysyroB2fDXOLWLmSmNgdD31nBwrHKa+gjkmhYQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/10.3.3/highcharts-more.min.js" integrity="sha512-8gI+HM5jEVDm/MNKycywnTvAOaiX9zdqq7x4RdVa/aBxY5T6I66yE612vTln10RMHAzu8SrmYblxmMcshe508g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/10.3.3/modules/data.min.js" integrity="sha512-Fplrq52So7oGaI4mFmFcVpZ50US6saI/RB5+yec8oNhQQwcn8X77RhX7crLFzBoenjUjAbfVJNIH7KJa5G8Kgg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/10.3.3/modules/exporting.min.js" integrity="sha512-azuQazgd4m6TavtXB0Zgm1Pb7RBk7Bq0G9JV8nmec7/toRckUZ6L/fG8D3xcoXk0Le9DS+5YmAi421fry057Fg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<!-- local ressources -->
 
-		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/10.3.3/modules/solid-gauge.js" integrity="sha512-8cJ3Lf1cN3ld0jUEZy26UOg+A5YGLguP6Xi6bKLyYurrxht+xkLJ9oH9rc7pvNiYsmYuTvpe3wwS6LriK/oWDg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/10.3.3/modules/funnel.js" integrity="sha512-8cJ3Lf1cN3ld0jUEZy26UOg+A5YGLguP6Xi6bKLyYurrxht+xkLJ9oH9rc7pvNiYsmYuTvpe3wwS6LriK/oWDg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/10.3.3/es5/modules/no-data-to-display.min.js" integrity="sha512-o3LKlXPdLqhiHScOQDDWXagL0l3GKDRISsYGFkLvdSpMPkxuLcEU+5+kPcVATa/6rI/4G8afUOqJu9D9rWQ9MQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/10.3.3/modules/drilldown.min.js" integrity="sha512-o4W4CY4jrH/vFHJTw/0mq/PzJGrhnV77x5yOxIT7xKidvJ4o/WNbM4I01zBNp205fq5xsBERVg1pqrZXSSrMkw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-
-		<!--
-		<script src="../assets/zemmouriLibrary/Data/dataManager-1.2.9.js"></script>
-		<script src="../assets/zemmouriLibrary/Highcharts/regroupData-1.2.10.js"></script>
-		<script src="../assets/zemmouriLibrary/Highcharts/personalization.js"></script>
-		<script src="../assets/zemmouriLibrary/bootstrap-table/build.js"></script>
-		<script src="../assets/zemmouriLibrary/Northwind/Commun.js"></script>
-		<script src="../assets/zemmouriLibrary/Northwind/Parameters.js"></script> -->
-		<!-- <script src="../ressources/script_loader.js"></script> -->
-		<script type="module" crossorigin src="./assets/index-9edbcba8.js"></script>
-		<link rel="stylesheet" href="./assets/index-98255d3a.css" />
+		<script type="module" crossorigin src="./assets/index-a9880727.js"></script>
+		<link rel="stylesheet" href="./assets/index-3ffa766a.css" />
 	</head>
 	<body>
 		<!-- <div class="menu"></div> -->
-		<h1 class="page-header m-5 text-center">Nour-Set</h1>
+		<h1 class="navbars page-header m-5 text-center text-primary">Nour-Set</h1>
 		<!-- RH: this is bootstrap 5 tabbed panel -->
-		<ul class="nav nav-tabs m-3" id="myTab" role="tablist">
-			<li class="nav-item" role="presentation">
-				<a class="nav-link active" id="data-tab" data-bs-toggle="tab" href="#data" role="tab" aria-controls="data" aria-selected="true">Data</a>
-			</li>
-			<li class="nav-item" role="presentation">
-				<a class="nav-link" id="descriptive-tab" data-bs-toggle="tab" href="#descriptive-pane" role="tab" aria-controls="descriptive-pane" aria-selected="false">Descriptive</a>
-			</li>
-			<li class="nav-item" role="presentation">
-				<a class="nav-link" id="lesion-tab" data-bs-toggle="tab" href="#lesion-pane" role="tab" aria-controls="lesion-pane" aria-selected="false">Lesion</a>
-			</li>
-			<li class="nav-item" role="presentation">
-				<a class="nav-link" id="age-tab" data-bs-toggle="tab" href="#age-pane" role="tab" aria-controls="age-pane" aria-selected="false">Age</a>
-			</li>
-			<li class="nav-item" role="presentation">
-				<a class="nav-link" id="gender-tab" data-bs-toggle="tab" href="#gender-pane" role="tab" aria-controls="gender-pane" aria-selected="false">Gender</a>
-			</li>
-			<li class="nav-item" role="presentation">
-				<a class="nav-link" id="dataset-tab" data-bs-toggle="tab" href="#dataset-pane" role="tab" aria-controls="dataset-pane" aria-selected="false">Comparaison</a>
-			</li>
-			<li class="nav-item" role="presentation">
-				<a class="nav-link" id="variant-tab" data-bs-toggle="tab" href="#variant-pane" role="tab" aria-controls="variant-pane" aria-selected="false">Variant</a>
-			</li>
-		</ul>
-		<div class="tab-content" id="myTabContent">
-			<div class="tab-pane fade show active" id="data" role="tabpanel" aria-labelledby="data-tab">
-				<div id="toolbar">
-					<div class="form-check form-switch">
-						<input class="form-check-input" type="checkbox" role="switch" id="onlyCovid" />
-						<label class="form-check-label" for="flexSwitchCheckDefault">Show + Cases only</label>
+		<div class="container-fluid">
+			<ul class="nav nav-tabs nav-fill mb-5" id="myTab" role="tablist">
+				<li class="nav-item" role="presentation">
+					<a class="nav-link active" id="dataTab" data-bs-toggle="tab" href="#data" role="tab" aria-controls="data" aria-selected="true">Data</a>
+				</li>
+				<li class="nav-item" role="presentation">
+					<a class="nav-link" id="descriptiveTab" data-bs-toggle="tab" href="#descriptive-pane" role="tab" aria-controls="descriptive-pane" aria-selected="false">Descriptive</a>
+				</li>
+				<li class="nav-item" role="presentation">
+					<a class="nav-link" id="lesionTab" data-bs-toggle="tab" href="#lesion-pane" role="tab" aria-controls="lesion-pane" aria-selected="false">Lesion</a>
+				</li>
+				<li class="nav-item" role="presentation">
+					<a class="nav-link" id="ageTab" data-bs-toggle="tab" href="#age-pane" role="tab" aria-controls="age-pane" aria-selected="false">Age</a>
+				</li>
+				<li class="nav-item" role="presentation">
+					<a class="nav-link" id="genderTab" data-bs-toggle="tab" href="#gender-pane" role="tab" aria-controls="gender-pane" aria-selected="false">Gender</a>
+				</li>
+				<li class="nav-item" role="presentation">
+					<a class="nav-link" id="datasetTab" data-bs-toggle="tab" href="#dataset-pane" role="tab" aria-controls="dataset-pane" aria-selected="false">Comparaison</a>
+				</li>
+				<li class="nav-item" role="presentation">
+					<a class="nav-link" id="variantTab" data-bs-toggle="tab" href="#variant-pane" role="tab" aria-controls="variant-pane" aria-selected="false">Variant</a>
+				</li>
+			</ul>
+		</div>
+		<div class="container-fluid">
+			<div class="tab-content" id="myTabContent">
+				<div class="tab-pane fade show active" id="data" role="tabpanel" aria-labelledby="dataTab">
+					<div id="toolbar">
+						<div class="form-check form-switch">
+							<input class="form-check-input" type="checkbox" role="switch" id="onlyCovid" />
+							<label class="form-check-label" for="flexSwitchCheckDefault">Show + Cases only</label>
+						</div>
+					</div>
+					<table id="table" data-toolbar="#toolbar" data-toggle="table" data-height="556" data-url="./data/NourSet.json" data-show-columns="true" data-pagination="true" data-show-pagination-switch="true">
+						<thead>
+							<tr>
+								<th data-field="PatientID" data-sortable="true">Patient ID</th>
+								<th data-field="Gender" data-align="center" data-sortable="true">Gender</th>
+								<th data-field="PatientBirthDate" data-align="center" data-visible="false" data-sortable="true">Birth Date</th>
+								<th data-field="Age" data-align="right" data-sortable="true">Age</th>
+								<th data-field="AgeRang" data-align="center" data-visible="false" data-sortable="true">Age Rang</th>
+								<th data-field="AgeStage" data-visible="false" data-sortable="true">Age Stage</th>
+								<th data-field="StudyInstanceUID" data-visible="false">Study ID</th>
+								<th data-field="StudyDescription" data-visible="false">Study Description</th>
+								<th data-field="StudyDate" data-align="center" data-sortable="true">Study Date</th>
+								<th data-field="Covid" data-align="center" data-formatter="covidFormatter" data-sortable="true">Covid</th>
+								<th data-field="LesionRate" data-align="right" data-formatter="lesionRateFormatter" data-sortable="true">Lesion Rate</th>
+								<th data-field="LesionRang" data-align="center" data-visible="false" data-sortable="true">Lesion Rang</th>
+								<th data-field="LesionStage" data-align="center" data-visible="false" data-sortable="true">Lesion Stage</th>
+								<th data-field="Observation" data-visible="false">Observation</th>
+								<th data-field="StudyCount" data-visible="false" data-sortable="true">Study Count</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+				<div class="tab-pane fade" id="descriptive-pane" role="tabpanel" aria-labelledby="descriptiveTab">
+					<div class="row m-3">
+						<div class="col-6 border rounded" id="Chart_DescriptiveStatistics"></div>
 					</div>
 				</div>
-				<table id="table" data-toolbar="#toolbar" data-toggle="table" data-url="/data/NourSet.json" data-show-columns="true" data-pagination="true" data-show-pagination-switch="true">
-					<thead>
-						<tr>
-							<th data-field="PatientID" data-sortable="true">Patient ID</th>
-							<th data-field="Gender" data-align="center" data-sortable="true">Gender</th>
-							<th data-field="PatientBirthDate" data-visible="false" data-sortable="true">Birth Date</th>
-							<th data-field="Age" data-sortable="true">Age</th>
-							<th data-field="AgeRang" data-visible="false" data-sortable="true">Age Rang</th>
-							<th data-field="AgeStage" data-visible="false" data-sortable="true">Age Stage</th>
-							<th data-field="StudyInstanceUID" data-visible="false">Study ID</th>
-							<th data-field="StudyDescription" data-visible="false">Study Description</th>
-							<th data-field="StudyDate" data-sortable="true">Study Date</th>
-							<th data-field="Covid" data-align="center" data-formatter="covidFormatter" data-sortable="true">Covid</th>
-							<th data-field="LesionRate" data-sortable="true">Lesion Rate</th>
-							<th data-field="LesionRang" data-visible="false" data-sortable="true">Lesion Rang</th>
-							<th data-field="LesionStage" data-visible="false" data-sortable="true">Lesion Stage</th>
-							<th data-field="Observation" data-visible="false">Observation</th>
-							<th data-field="StudyCount" data-visible="false" data-sortable="true">Study Count</th>
-						</tr>
-					</thead>
-				</table>
-				<script>
-					function covidFormatter(value, row) {
-						if (value == true) return '<i class="fa-sharp fa-solid fa-plus"></i>'
-						if (value == false) return '<i class="fa-sharp fa-solid fa-minus"></i>'
-						return '<i class="fa-sharp fa-solid fa-question"></i>'
-					}
-
-					onlyCovid.addEventListener('change', (event) => {
-						if (event.currentTarget.checked) {
-							$('#table').bootstrapTable('filterBy', {
-								Covid: true,
-							})
-						} else {
-							$('#table').bootstrapTable('filterBy', {
-								Covid: [true, false, null],
-							})
-						}
-					})
-				</script>
-			</div>
-			<div class="tab-pane fade" id="descriptive-pane" role="tabpanel" aria-labelledby="descriptive-tab">
-				<div class="row">
-					<div class="col-6" id="Chart_DescriptiveStatistics"></div>
+				<div class="tab-pane fade" id="lesion-pane" role="tabpanel" aria-labelledby="lesionTab">
+					<div class="row m-3">
+						<div class="col-7 border rounded" id="Chart_LesionRang"></div>
+						<div class="col-5 border rounded" id="Chart_LesionStage"></div>
+					</div>
 				</div>
-				<!-- <script src="assets/js/chart_descriptive.js"></script> -->
-			</div>
-			<div class="tab-pane fade" id="lesion-pane" role="tabpanel" aria-labelledby="lesion-tab">
-				<div class="row">
-					<div class="col-7" id="Chart_LesionRang"></div>
-					<div class="col-5" id="Chart_LesionStage"></div>
+				<div class="tab-pane fade" id="age-pane" role="tabpanel" aria-labelledby="ageTab">
+					<div class="row m-3">
+						<div class="col-7 border rounded" id="Chart_AgeRang"></div>
+						<div class="col-5 border rounded" id="Chart_AgeStage"></div>
+					</div>
 				</div>
-				<!-- <script src="assets/js/chart_lesion.js"></script> -->
-			</div>
-			<div class="tab-pane fade" id="age-pane" role="tabpanel" aria-labelledby="age-tab">
-				<div class="row">
-					<div class="col-7" id="Chart_AgeRang"></div>
-					<div class="col-5" id="Chart_AgeStage"></div>
+				<div class="tab-pane fade" id="gender-pane" role="tabpanel" aria-labelledby="genderTab">
+					<div class="row m-3">
+						<div class="col-7 border rounded" id="Chart_AgeRangGender"></div>
+						<div class="col-5 border rounded" id="Chart_GenderPie"></div>
+					</div>
 				</div>
-			</div>
-			<div class="tab-pane fade" id="gender-pane" role="tabpanel" aria-labelledby="gender-tab">
-				<div class="row">
-					<div class="col-7" id="Chart_AgeRangGender"></div>
-					<div class="col-5" id="Chart_GenderPie"></div>
+				<div class="tab-pane fade" id="dataset-pane" role="tabpanel" aria-labelledby="comparaisonTab">
+					<div class="row m-3">
+						<div class="col-7 border rounded" id="Chart_DatasetTime"></div>
+						<div class="col-5 border rounded" id="Chart_DatasetStudy"></div>
+					</div>
 				</div>
-				<!-- <script src="assets/js/chart_gender.js"></script> -->
-			</div>
-			<div class="tab-pane fade" id="dataset-pane" role="tabpanel" aria-labelledby="comparaison-tab">
-				<div class="row">
-					<div class="col-7" id="Chart_DatasetTime"></div>
-					<div class="col-5" id="Chart_DatasetStudy"></div>
+				<div class="tab-pane fade" id="variant-pane" role="tabpanel" aria-labelledby="variantTab">
+					<div class="row m-3">
+						<div class="col-7 border rounded" id="Chart_VariantsMonthly"></div>
+						<div class="col-5 border rounded" id="Chart_VariantsPie"></div>
+					</div>
 				</div>
-				<!-- <script src="assets/js/chart_comparaison.js"></script> -->
-			</div>
-			<div class="tab-pane fade" id="variant-pane" role="tabpanel" aria-labelledby="variant-tab">
-				<div class="row">
-					<div class="col-7" id="Chart_VariantsMonthly"></div>
-					<div class="col-5" id="Chart_VariantsPie"></div>
-				</div>
-				<!-- <script src="assets/js/chart_variant.js"></script> -->
 			</div>
 		</div>
-		<footer class="footer"></footer>
+		<footer class="footer">
+			<div class="container"><p class="text-muted lang-entry fw-bold">© 2023. Powred By ZEMMOURI Mohamed</p></div>
+		</footer>
 	</body>
-
-	<script src="assets/js/page_builder.js"></script>
 </html>
+
+<script>
+	// bootstrap-table
+	function covidFormatter(value, row) {
+		if (value === true) return '<i class="fa-sharp fa-solid fa-plus"></i>'
+		if (value === false) return '<i class="fa-sharp fa-solid fa-minus"></i>'
+		return '<i class="fa-sharp fa-solid fa-question"></i>'
+	}
+
+	function lesionRateFormatter(value, row) {
+		return value + ' %'
+	}
+
+	function ageFormatter(value, row) {
+		return `${value} Y`
+	}
+</script>
